@@ -1,0 +1,147 @@
+/* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.basic-container {
+    padding: 30px;
+}
+
+.version-info {
+    font-size: 8pt;
+    float: right;
+}
+
+
+/**
+  Default Markup
+**/
+
+body {
+    background: #F0E5E1;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/**
+  Component
+**/
+
+label {
+    width: 100%;
+}
+
+.card-input-element {
+    display: none;
+}
+
+.card-input {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-input:hover {
+    cursor: pointer;
+}
+
+.card-input-element:checked+.card-input {
+    box-shadow: 0px 4px 0.3125rem 4px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    float: right;
+}
+
+#back{
+float: left;
+}
+
+.inputfile:focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+#back {
+    float: left;
+}
+
+
+/* input file */
+
+.hidden-file {
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    border: none;
+    margin: 0;
+    padding: 0
+}
+
+/* express delivery css */
+.cc-selector input{
+    margin:20px;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.visa{background-image:url(../../../../../../Desktop/download.png);}
+.mastercard{background-image:url(https://www.clipartwiki.com/clipimg/full/301-3010802_transparent-delivery-truck-png-cartoon-delivery-truck.png);}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .5;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:140px;height:80px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#999;text-decoration:none;}
+p{margin-bottom:.3em;}
+
+
+/* second radio button exmple */
+/* .card-input-radio {
+    display: none;
+  }
+  
+  .card-input-radio:checked + .card {
+    background-color: white;
+    border: 3px solid green;
+   }
+  
+  .card {
+    background-color: lightgrey;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+  } */

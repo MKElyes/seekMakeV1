@@ -1,0 +1,218 @@
+<div class="container">
+  <div id="stepper1"  class="bs-stepper">
+    <div class="bs-stepper-header">
+      <div class="step" data-target="#test-l-1">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">1</span>
+          <span class="bs-stepper-label">Technique</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-2">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">2</span>
+          <span class="bs-stepper-label">Upload your file</span>
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-3">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">3</span>
+          <span class="bs-stepper-label">Information</span>
+        </button>
+      </div>
+    </div>
+    <div class="bs-stepper-content" >
+      <form [formGroup]="firstFormGroup" >
+        <div id="test-l-1" class="content">
+            <div class="container-fluid">
+              <div class="row justify-content-center">
+                
+                <div class="col-md-3 col-sm-3 col-lg-3 col-4 card-input">
+                  <label class="card-input" for="type_1">
+                    <input type="radio" value="impression" formControlName="technique" class="card-input-element" id="type_1" />
+                    <div class="panel panel-default card-input">
+                      <div class="card">
+                        <img src="../../assets/img/t1.png" style="max-height: 241px;" class="card-img-top img-responsive" >
+                        <div class="card-body ">
+                          <div class="card-title h5">Impression 3D</div>
+                          <p class="card-text h8"> L'impression 3D est la fabrication de pièces par agglomération de
+                            matière.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </label>
+
+                </div>
+                <div class="col-md-3 col-sm-3 col-lg-3 col-4 card-input">
+
+                  <label class="card-input" for="type_2">
+                    <input type="radio" value="fraisage" formControlName="technique" class="card-input-element" id="type_2" />
+
+                    <div class="panel panel-default card-input">
+                      <div class="card">
+                        <img src="../../assets/img/t2.png" style="max-height: 241px;" class="card-img-top img-responsive" >
+                        <div class="card-body">
+                          <div class="card-title h5">Fraisage</div>
+                          <p class="card-text h8"> Le fraisage est l'enlèvement de matière sous forme de copeaux.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+
+                </div>
+                <div class="col-md-3 col-sm-3 col-lg-3 col-4 card-input">
+
+                  <label class="card-input" for="type_3">
+                    <input type="radio" value="laser" formControlName="technique" class="card-input-element" id="type_3" />
+
+                    <div class="panel panel-default card-input">
+                      <div class="card">
+                        <img src="../../assets/img/t3.png" style="max-height: 241px;" class="card-img-top img-responsive" >
+                        <div class="card-body">
+                          <div class="card-title h5">Laser</div>
+                          <p class="card-text h8"> La découpe laser consiste à découper la matière grâce au <br> laser.
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+
+                </div>
+              </div>
+
+            </div>
+            <div>
+            <button (click)="next()" class="btn btn-primary">Next</button>
+          </div>
+          
+        </div>
+        <!-- </form> -->
+        <!-- <form [formGroup]="secondFormGroup"> -->
+        <div id="test-l-2" class="content">
+          <div class="container mt-5 mb-5">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+
+                  <div class="row">
+                    <div class="col-sm-2 mx-auto">
+                      <label for="fileUpload" class="btn btn-primary" style="cursor: pointer;">Upload File</label>
+                      <span class="hidden-file">
+                        <input type="file" (change)="onFileChange($event)" id="fileUpload" />
+
+                      </span>
+                    </div>
+
+                  </div>
+                  <div class="col-md-9 mt-4 mx-auto">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Size</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            {{fileMetaData.name }}
+                          </td>
+                          <td>
+                            {{fileMetaData.size }} MB
+                          </td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-6 col-sm-6 col-6">
+                <div>
+                    <input type="text" class="form-control" 
+                      placeholder="Epaisseur">
+                  </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-6">
+              <div class="for-group">
+                <select class="selectpicker" class="form-control" >
+                    <optgroup label="materi">
+                      <option>Mustard</option>
+                      <option>Ketchup</option>
+                      <option>Relish</option>
+                    </optgroup>
+                    <optgroup label="Camping">
+                      <option>Tent</option>
+                      <option>Flashlight</option>
+                      <option>Toilet Paper</option>
+                    </optgroup>
+                  </select>
+                </div>
+                </div>
+          </div>
+          <div>
+            <button (click)="next()" class="btn btn-primary">Next</button>
+            <button (click)="back()" id="back" class="btn btn-primary">Back</button>
+          </div>
+        </div>
+      <!-- </form> -->
+      <!-- <form [formGroup]="thirdFormGroup"> -->
+      <div id="test-l-3" class="content text-center">
+          <div class="container mt-5">
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-8">
+                <label>
+                  <h4>Adresse de livraison</h4>
+                </label>
+                
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+                      placeholder="Nom et Prénom">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      placeholder="Adresse">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      placeholder="Région">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ville">
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Code postal">
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Telephone">
+                  </div>
+                  
+                    <div class="cc-selector">
+                      <input id="visa" type="radio" name="credit-card" value="visa" />
+                      <label class="drinkcard-cc visa" for="visa"></label>
+                      <input id="mastercard" type="radio" name="credit-card" value="mastercard" />
+                      <label class="drinkcard-cc mastercard" for="mastercard"></label>
+                    </div>
+                  
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                
+              </div>
+
+
+            </div>
+           
+          </div>
+          <button type="submit" class="btn btn-primary mt-5">Submit</button>
+        </div>
+        </form>
+      </div>
+  </div>
+</div>
